@@ -1,77 +1,171 @@
-<!DOCTYPR html>
+<!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Birthday Gift - CodeMasala</title>
-        
-        <!-- Link CSS Style.css file-->
-        
-        <link rel="stylesheet" href="css/style.css">
-        
-    </head>
-    <body>
-        <div class='moon'>
-            <div class='crater1'></div>
-            <div class='crater2'></div>
-            <div class='crater3'></div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Birthday Gift - CodeMasala</title>
+
+    <!-- Link CSS Style.css file-->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="login">
+    <!-- Login Start -->
+    <div class="main login">
+      <p class="sign" align="center">Welcome</p>
+      <p id="error" align="center">Please Login to continue</p>
+      <form id="form" class="form1">
+        <input
+          class="un"
+          type="text"
+          align="center"
+          placeholder="Username"
+          id="email"
+        />
+        <input
+          class="pass"
+          type="password"
+          align="center"
+          id="password"
+          placeholder="Password"
+        />
+        <button type="submit" class="submit" align="center">Login</button>
+      </form>
+      <script>
+        //   Handle Submit
+        function handleSubmit(e) {
+          e.preventDefault();
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          var error = document.getElementById("error");
+
+          if (email == "" || password == "") {
+            error.innerHTML = "Please fill all the fields";
+          }
+          if (email != "dimbasse" || password != "dimbasseJan1") {
+            error.innerHTML = "Invalid Credentials";
+          } else {
+            document.body.classList.remove("login");
+          }
+        }
+
+        const form = document.getElementById("form");
+        form.addEventListener("submit", handleSubmit);
+      </script>
+    </div>
+    <!-- Login End -->
+    <div class="real" style="position: relative; height: 100vh">
+      <div class="moon">
+        <div class="crater1"></div>
+        <div class="crater2"></div>
+        <div class="crater3"></div>
+      </div>
+
+      <canvas id="canvas"></canvas>
+
+      <div id="sea"></div>
+      <div id="beach"></div>
+
+      <img
+        src="https://dl.dropbox.com/s/2k0mtrxc2dqurmh/jumping.png"
+        alt="Jumping-people"
+        id="people"
+      />
+
+      <div id="merrywrap" class="merrywrap">
+        <div class="giftbox">
+          <div class="cover">
+            <div></div>
+          </div>
+
+          <div class="box"></div>
         </div>
-        
-        <canvas id="canvas"></canvas>
-        
-        <div id="sea"></div>
-        <div id="beach"></div>
-        
-        <img src="https://dl.dropbox.com/s/2k0mtrxc2dqurmh/jumping.png" alt="Jumping-people" id="people" />
-        
-        <div id="merrywrap" class="merrywrap">
-            <div class="giftbox">
-                <div class="cover">
-                    <div></div>
-                </div>
-                
-                <div class="box"></div>
-            </div>
-            
-            <div class="icons">
-                <div class="row">
-                    <span>H</span>
-                    <span>a</span>
-                    <span>p</span>
-                    <span>p</span>
-                    <span>y</span>
-                    
-                </div>
-                <div class="row">
-                    <span>B</span>
-                    <span>i</span>
-                    <span>r</span>
-                    <span>t</span>
-                    <span>h</span>
-                    <span>d</span>
-                    <span>a</span>
-                    <span>y</span>
-                </div>
-                
-                <div class="row">
-                    <span>C</span>
-                    <span>o</span>
-                    <span>d</span>
-                    <span>e</span>
-                    <span>M</span>
-                    <span>a</span>
-                    <span>s</span>
-                    <span>a</span>
-                    <span>l</span>
-                    <span>a</span>
-                </div>
-            </div>
+
+        <div class="icons">
+          <div class="row">
+            <span>H</span>
+            <span>a</span>
+            <span>p</span>
+            <span>p</span>
+            <span>y</span>
+          </div>
+          <div class="row">
+            <span>B</span>
+            <span>i</span>
+            <span>r</span>
+            <span>t</span>
+            <span>h</span>
+            <span>d</span>
+            <span>a</span>
+            <span>y</span>
+          </div>
+
+          <div class="row">
+            <span>D</span>
+            <span>i</span>
+            <span>m</span>
+            <span>a</span>
+            <span>b</span>
+            <span>a</span>
+            <span>s</span>
+            <span>s</span>
+            <span>e</span>
+          </div>
         </div>
-        
-        <div id="video"></div>
-        
-        
-        <script src="js/index.js"></script>
-        
-    </body>
+
+        <div
+          style="
+            width: 80vw;
+            left: 5vw;
+            top: 10vh;
+            height: 40vh;
+            position: absolute;
+            padding: 5vw;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.267);
+            color: white;
+          "
+        >
+          I imagine that the day you were born was a day of great celebration,
+          and I’m sorry I wasn’t there. But today, we are together, and we can
+          celebrate your birthday in grand style. You deserve the best in the
+          world, my personal PHARM!
+          <br />
+          <br />
+          For today, dance as though no one is watching you, Love as though you
+          have never loved before, Sing as though no one can hear you, Live as
+          though heaven is on earth! You’ve been faced with trials and
+          tribulations; joys and sorrows! But you have always made the best out
+          of what you had, even when there wasn’t much at all.
+          <br />
+          <br />
+          Everything has led you to this moment, where a strange young man, who
+          hardly knows you, writes a long birthday paragraph for you just
+          because he wants her to know how much he loves her!
+          <br />
+          <br />
+          I’m not known for plenty writing but my wish for your birthday is for
+          you to enjoy every day to the fullest. I thank heaven for all of the
+          amazing things that come your way. I love you, happy birthday. For a
+          lot of years, I was lonely and I was just pretending to be happy. But
+          then you came along and everything changed. You have helped me realise
+          how special the world is, and I don’t have to pretend anymore. Enjoy a
+          solid year and continue to be the best at what you do - plus let
+          CHRIST remain in the first place and he’d handle the rest.
+          <br />
+          <br />
+          For that and for everything else, thank you and Happy Birthday, FAV!
+        </div>
+      </div>
+
+      <div id="video"></div>
+    </div>
+    <div class="real" style="height: 120vh"></div>
+    <script src="js/index.js"></script>
+  </body>
 </html>
