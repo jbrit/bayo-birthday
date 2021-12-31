@@ -560,6 +560,8 @@ a {
       border-radius: 0px;
   }
 }
+
+/* Some JS Classes */
 .login .real {
   display: none;
 }
@@ -568,5 +570,8 @@ a {
   display: block;
 }
 .login.main {
+  display: none;
+}
+.gift .longtext {
   display: none;
 }

@@ -270,6 +270,7 @@ window.onload = function () {
     }
     if (step === 4) {
       reveal();
+      document.body.classList.remove("gift");
       return;
     }
     setTimeout(openBox, stepMinutes[step - 1]);
@@ -294,7 +295,11 @@ function reveal() {
   }
 
   var ifrm = document.createElement("iframe");
-  ifrm.setAttribute("src", "https://www.youtube.com/embed/8T2YC8TidUM?controls=0&loop=1&autoplay=1");
+  ifrm.setAttribute("allowfullscreen", "");
+  ifrm.setAttribute("frameborder", "0");
+  ifrm.setAttribute("src", "https://www.youtube.com/embed/8T2YC8TidUM?controls=0&loop=1&autoplay=1&t=3");
+
+  console.log(ifrm);
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';

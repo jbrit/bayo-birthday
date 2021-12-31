@@ -47,10 +47,11 @@
           if (email == "" || password == "") {
             error.innerHTML = "Please fill all the fields";
           }
-          if (email != "dimbasse" || password != "dimbasseJan1") {
+          if (email != "dimabasse" || password != "dimabasseJan1") {
             error.innerHTML = "Invalid Credentials";
           } else {
             document.body.classList.remove("login");
+            document.body.classList.add("gift");
           }
         }
 
@@ -119,16 +120,18 @@
         </div>
 
         <div
+        class="longtext"
           style="
             width: 80vw;
             left: 5vw;
-            top: 10vh;
+            top: 20vh;
             height: 40vh;
             position: absolute;
-            padding: 5vw;
+            padding: 5vh 5vw;
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.267);
             color: white;
+            font-size: 1.1rem;
           "
         >
           I imagine that the day you were born was a day of great celebration,
@@ -165,7 +168,6 @@
 
       <div id="video"></div>
     </div>
-    <div class="real" style="height: 120vh"></div>
     <script src="js/index.js"></script>
   </body>
 </html>
